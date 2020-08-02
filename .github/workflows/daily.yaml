@@ -1,1 +1,10 @@
-"test" 
+on: [push]
+name: Helloworld
+jobs:
+  build:
+    name: Testingjobs
+    runs-on: ubuntu-latest
+    steps:
+       - id: stepid
+         name: stpper
+         run: echo "test"
