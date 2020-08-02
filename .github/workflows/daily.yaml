@@ -5,6 +5,9 @@ jobs:
     name: Testingjobs
     runs-on: ubuntu-latest
     steps:
-       - id: stepid
-         name: stpper
-         run: echo "test"
+    - uses: actions/checkout@master
+    - run: ls > hello.txt
+    - uses: actions/upload-artifact@v2
+      with:
+        name: my-artifact
+        path: hello.txt
